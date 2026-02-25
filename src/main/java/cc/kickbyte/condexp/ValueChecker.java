@@ -14,6 +14,9 @@ public class ValueChecker {
             String left = matcher.group(1);
             String operator = matcher.group(2);
             String right = matcher.group(3);
+            if (right.equals("NULLABLE")) {
+                return left.isEmpty();
+            }
             try {
                 return switch (operator) {
                     case "==" -> left.equals(right);
