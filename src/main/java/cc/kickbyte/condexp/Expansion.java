@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class Expansion extends PlaceholderExpansion {
 
-    private static final Pattern PATTERN = Pattern.compile("^\\{(.*)}\\?\\{(.*)}:\\{(.*)}$");
+    private static final Pattern PATTERN = Pattern.compile("^(!?)\\{(.*)}\\?\\{(.*)}:\\{(.*)}$");
     private static final ValueChecker checker = new ValueChecker();
 
     @Override
@@ -34,15 +34,27 @@ public class Expansion extends PlaceholderExpansion {
 
         Matcher matcher = PATTERN.matcher(params);
         if (matcher.matches()) {
-            String condition = matcher.group(1);
-            String trueValue = matcher.group(2);
-            String falseValue = matcher.group(3);
+            String prefix = matcher.group(1);
+            boolean inverse = prefix != null && !prefix.isEmpty() && prefix.charAt(0) == '!';
 
-            condition = PlaceholderAPI.setPlaceholders(player, condition.replace("^", "%"));
-            return checker.check(condition) ? trueValue : falseValue;
+            String condition = matcher.group(2);
+            String trueValue = matcher.group(3);
+            String falseValue = matcher.group(4);
+
+            condition = placeholders(player, condition);
+
+            boolean result = checker.check(condition);
+            if (inverse) result = !result;
+
+            // Повторение - мать учения. :D
+            return placeholders(player, result ? trueValue : falseValue);
         }
 
         return null;
+    }
+
+    private String placeholders(OfflinePlayer player,String input) {
+        return PlaceholderAPI.setPlaceholders(player, input.replace("^", "%"));
     }
 
 }

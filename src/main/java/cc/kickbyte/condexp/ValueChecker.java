@@ -26,7 +26,6 @@ public class ValueChecker {
                     case "<" -> parse(left) < parse(right);
                     case ">" -> parse(left) > parse(right);
                     case "==!" -> left.equalsIgnoreCase(right);
-                    case "!==!" -> !left.equalsIgnoreCase(right);
                     default -> false;
                 };
             } catch (NumberFormatException e) {
