@@ -10,23 +10,21 @@
 
 ---
 
-### Формат
+### 🥬 Формат
 
 **Обычный:** `%cond_{УСЛОВИЕ}?{ЕСЛИ ДА}:{ЕСЛИ НЕТ}%`
-
 **С инверсией:** `%cond_!{УСЛОВИЕ}?{ЕСЛИ ДА}:{ЕСЛИ НЕТ}%`
 
-### Режим Fallback
+### 🌠 Режим Fallback
 Позволяет вывести определенный текст, если плейсхолдер пуст. Если значение есть — выведет его.
 
 
 **Префикс:** `fallback`, `fb`
-
 **Пример:** `%cond_fb_{^clan_name^;Нет клана}%`
 
 ---
 
-## Операторы
+## 📗 Операторы
 
 | Оператор | Описание |
 | :--- | :--- |
@@ -44,7 +42,7 @@
 
 ---
 
-## Примеры
+## 🍏 Примеры
 
 <details>
 <summary><b>Базовые</b></summary>
@@ -84,3 +82,19 @@
 [**GitHub Issues**](https://github.com/SuperCHIROK1/ConditionExpansion/issues) / [**Telegram**](https://t.me/bordyer) / [**Обсуждение**](https://spigotmc.ru/threads/conditionexpansion-sravnenie-i-vyvod-znachenij-doloj-javascript-placeholderapi.28600/)
 
 </div>
+
+тест
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
