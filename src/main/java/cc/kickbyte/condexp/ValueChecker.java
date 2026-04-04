@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class ValueChecker {
 
-    private static final Pattern PATTERN = Pattern.compile("^\\s*(.+?)\\s*(==|!=|>=|<=|>|<|==!|~~=|\\$=|#=)\\s*(.+?)\\s*$");
+    private static final Pattern PATTERN = Pattern.compile("^\\s*(.+?)\\s*(==|!=|>=|<=|>|<|==!|~~=|\\$=|#=|@=)\\s*(.+?)\\s*$");
 
     public boolean check(String input) {
         Matcher matcher = PATTERN.matcher(input);
@@ -29,6 +29,7 @@ public class ValueChecker {
                     case "~~=" -> left.contains(right);
                     case "$=" -> left.startsWith(right);
                     case "#=" -> left.endsWith(right);
+                    case "@=" -> left.indexOf(right.charAt(0)) != -1;
                     default -> false;
                 };
             } catch (NumberFormatException e) {
