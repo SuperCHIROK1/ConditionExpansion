@@ -7,6 +7,8 @@ import org.bukkit.OfflinePlayer;
 @UtilityClass
 public class Utils {
 
+    public char PLACEHOLDER_CHAR = '^';
+
     public String parsePlaceholders(OfflinePlayer player, String input) {
         if (!containsPlaceholdersChar(input)) return input;
         input = input.replace('^', '%');
@@ -14,7 +16,7 @@ public class Utils {
     }
 
     public boolean containsPlaceholdersChar(String input) {
-        return input.indexOf('^') != -1;
+        return input.indexOf(PLACEHOLDER_CHAR) != -1;
     }
 
     public String getPlaceholderPrefix(String input) {
