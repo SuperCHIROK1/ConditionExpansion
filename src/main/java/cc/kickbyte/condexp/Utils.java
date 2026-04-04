@@ -22,7 +22,7 @@ public class Utils {
     public String getPlaceholderPrefix(String input) {
         int index = input.indexOf('_');
         if (index != -1) return input.substring(0, index);
-        return null;
+        return "default";
     }
 
 }
