@@ -1,9 +1,7 @@
 package cc.kickbyte.condexp;
 
-import me.clip.placeholderapi.PlaceholderAPI;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.regex.Matcher;
