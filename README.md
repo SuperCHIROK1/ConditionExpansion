@@ -3,12 +3,16 @@
 ![PHOTO](https://spigotmc.ru/attachments/group-217-png.44809/)
 
 **ConditionExpansion** — мощное и легковесное дополнение для **PlaceholderAPI**, которое позволяет сравнивать значения (текст или числа) и выводить результат в зависимости от выполнения условия прямо в строке.
+</div>
 
 > [!IMPORTANT]
 > Если вы вставляете плейсхолдер внутрь условия, используйте `^` вместо `%`.
 > Пример: `^player_name^` вместо `%player_name%`.
 
+
 ---
+
+<div align="center">
 
 ### 🥬 Формат
 
@@ -75,26 +79,13 @@
 ---
 
 ## ✉️ Обратная связь
+</div>
 
 > [!WARNING]
 > Если вы нашли баг, не пишите об этом в рецензии/отзыве. Лучше сообщите разработчику напрямую.
 
+<div align="center">
+
 [**GitHub Issues**](https://github.com/SuperCHIROK1/ConditionExpansion/issues) / [**Telegram**](https://t.me/bordyer) / [**Обсуждение**](https://spigotmc.ru/threads/conditionexpansion-sravnenie-i-vyvod-znachenij-doloj-javascript-placeholderapi.28600/)
 
 </div>
-
-тест
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
