@@ -11,7 +11,7 @@ public class Utils {
 
     public String parsePlaceholders(OfflinePlayer player, String input) {
         if (!containsPlaceholdersChar(input)) return input;
-        input = input.replace('^', '%');
+        input = input.replace(PLACEHOLDER_CHAR, '%');
         return PlaceholderAPI.setPlaceholders(player, input);
     }
 
