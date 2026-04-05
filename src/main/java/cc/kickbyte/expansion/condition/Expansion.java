@@ -1,4 +1,4 @@
-package cc.kickbyte.condexp;
+package cc.kickbyte.expansion.condition;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
@@ -28,7 +28,7 @@ public class Expansion extends PlaceholderExpansion {
 
     @Override
     public @NotNull String getVersion() {
-        return "1.1.1";
+        return "1.1.2";
     }
 
     @Override

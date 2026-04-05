@@ -1,4 +1,4 @@
-package cc.kickbyte.condexp;
+package cc.kickbyte.expansion.condition;
 
 import lombok.experimental.UtilityClass;
 import me.clip.placeholderapi.PlaceholderAPI;

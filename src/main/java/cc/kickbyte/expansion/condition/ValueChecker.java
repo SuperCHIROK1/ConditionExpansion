@@ -1,4 +1,4 @@
-package cc.kickbyte.condexp;
+package cc.kickbyte.expansion.condition;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
