@@ -51,7 +51,7 @@ public class Expansion extends PlaceholderExpansion {
             return value.isEmpty() ? replacement : value;
         }
 
-        return null;
+        return params;
     }
 
     private String processDefault(OfflinePlayer player, String params) {
@@ -71,7 +71,7 @@ public class Expansion extends PlaceholderExpansion {
             return result ? trueValue : falseValue;
         }
 
-        return null;
+        return params;
     }
 
 }
