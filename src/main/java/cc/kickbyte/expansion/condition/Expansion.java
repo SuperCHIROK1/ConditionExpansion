@@ -14,7 +14,7 @@ public class Expansion extends PlaceholderExpansion {
     private static final Pattern FALLBACK_PATTERN =
             Pattern.compile("^\\{(.*);(.*)}$");
 
-    private static final ValueChecker checker = new ValueChecker();
+    private final ValueChecker checker = new ValueChecker();
 
     @Override
     public @NotNull String getIdentifier() {
