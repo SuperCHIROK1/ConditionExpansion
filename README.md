@@ -1,91 +1,40 @@
+![img](image.png)
 <div align="center">
 
-![PHOTO](https://spigotmc.ru/attachments/group-217-png.44809/)
-
-**ConditionExpansion** — мощное и легковесное дополнение для **PlaceholderAPI**, которое позволяет сравнивать значения (текст или числа) и выводить результат в зависимости от выполнения условия прямо в строке.
-</div>
-
-> [!IMPORTANT]
-> Если вы вставляете плейсхолдер внутрь условия, используйте `^` вместо `%`.
-> Пример: `^player_name^` вместо `%player_name%`.
-
-
----
-
-<div align="center">
-
-### 🥬 Формат
-
-**Обычный:** `%cond_{УСЛОВИЕ}?{ЕСЛИ ДА}:{ЕСЛИ НЕТ}%`
-**С инверсией:** `%cond_!{УСЛОВИЕ}?{ЕСЛИ ДА}:{ЕСЛИ НЕТ}%`
-
-### 🌠 Режим Fallback
-Позволяет вывести определенный текст, если плейсхолдер пуст. Если значение есть — выведет его.
-
-
-**Префикс:** `fallback`, `fb`
-**Пример:** `%cond_fb_{^clan_name^;Нет клана}%`
-
----
-
-## 📗 Операторы
-
-| Оператор | Описание |
-| :--- | :--- |
-| `==` | Равно |
-| `!=` | Не равно |
-| `>` | Больше |
-| `<` | Меньше |
-| `>=` | Больше или равно |
-| `<=` | Меньше или равно |
-| `==!` | Равно (игнорируя регистр) |
-| `~~=` | Содержит (contains) |
-| `$=` | Начинается с.. (startsWith) |
-| `#=` | Заканчивается на.. (endsWith) |
-| `@=`| Содержит символ |
-
----
-
-## 🍏 Примеры
-
-<details>
-<summary><b>Базовые</b></summary>
-
-**Сравнение текста (Ник):**
-`%cond_{^player_name^==Notch}?{Создатель}:{Игрок}%`
-
-**Сравнение чисел (Баланс):**
-`%cond_{^vault_eco_balance^>=1000}?{&aБогач}:{&cБедняк}%`
-
-**Игнорирование регистра (Мир):**
-`%cond_{^player_world^==!world}?{В обычном мире}:{В другом мире}%`
-
-</details>
-
-<details>
-<summary><b>Продвинутые</b></summary>
-
-**С использованием инверсии (Если НЕ в AFK):**
-`%cond_!{^essentials_afk^==yes}?{&aИграет}:{&7Спит}%`
-
-**Плейсхолдер внутри ответа (Здоровье):**
-`%cond_{^player_health^<10}?{&cКрит: ^player_health^}:{&aОК}%`
-
-**Проверка прав через LuckPerms:**
-`%cond_{^luckperms_has_permission_my.custom.perm^==true}?{Есть доступ}:{Нет доступа}%`
-
-</details>
-
----
-
-## ✉️ Обратная связь
-</div>
-
-> [!WARNING]
-> Если вы нашли баг, не пишите об этом в рецензии/отзыве. Лучше сообщите разработчику напрямую.
-
-<div align="center">
-
-[**GitHub Issues**](https://github.com/SuperCHIROK1/ConditionExpansion/issues) / [**Telegram**](https://t.me/bordyer) / [**Обсуждение**](https://spigotmc.ru/threads/conditionexpansion-sravnenie-i-vyvod-znachenij-doloj-javascript-placeholderapi.28600/)
+[![Issues](https://img.shields.io/github/issues/SuperCHIROK1/ConditionExpansion?style=for-the-badge&color=%23279EFF)](https://github.com/SuperCHIROK1/ConditionExpansion/issues)
+[![Download](https://img.shields.io/badge/Download-SpigotMC.ru-%23279EFF?style=for-the-badge)](https://spigotmc.ru/resources/5087/)
+[![Download](https://img.shields.io/badge/Download-Black--Minecraft.com-%23279EFF?style=for-the-badge)](https://black-minecraft.com/resources/10416/)
 
 </div>
+
+## 🐋 Преимущества:
+- **Большое количество операторов и модификаторов**
+- **Удобное создание и редактирование без ИСПОЛЬЗОВАНИЯ JavaScript**
+- **Режим Fallback:** Позволяет вывести определенный текст, если плейсхолдер пуст
+- **Режим Switch**: Позволяет вывести текст на основе сравнения значения с несколькими вариантами
+- *не даёт утекать памяти, как JavaScript расширение*
+
+## 📘 Операторы
+
+| Оператор | Описание                      |
+|:---------|:------------------------------|
+| `==`     | Равно                         |
+| `!=`     | Не равно                      |
+| `>`      | Больше                        |
+| `<`      | Меньше                        |
+| `>=`     | Больше или равно              |
+| `<=`     | Меньше или равно              |
+| `==!`    | Равно (игнорируя регистр)     |
+| `~~=`    | Содержит (contains)           |
+| `$=`     | Начинается с.. (startsWith)   |
+| `#=`     | Заканчивается на.. (endsWith) |
+| `@=`     | Содержит символ               |
+
+## 🌠 Обсуждения на форумах
+Здесь вы сможете найти примеры работы плейсхолдеров или узнать формат того или иного режима.
+
+- [**🔷 SpigotMC.ru**](https://spigotmc.ru/resources/5087/)
+- [**🔷 Black-Minecraft.com**](https://black-minecraft.com/resources/10416/)
+
+
+
