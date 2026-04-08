@@ -13,6 +13,10 @@ public class Expansion extends PlaceholderExpansion {
             Pattern.compile("^(!?)\\{(.*)}\\?\\{(.*)}:\\{(.*)}$");
     private static final Pattern FALLBACK_PATTERN =
             Pattern.compile("^\\{(.*);(.*)}$");
+    private static final Pattern SWITCH_PATTERN =
+            Pattern.compile("^\\{(.*)}_\\{(.*)}$");
+    private static final Pattern CASE_PATTERN =
+            Pattern.compile("^\\s*(.*?)\\s*==\\s*(.*)\\s*$");
 
     private final ValueChecker checker = new ValueChecker();
 
@@ -37,6 +41,7 @@ public class Expansion extends PlaceholderExpansion {
 
         return switch (prefix) {
             case "fallback", "fb" -> processFallback(player, params, prefix);
+            case "switch" -> processSwitch(player, params);
             default -> processDefault(player, params);
         };
     }
@@ -72,6 +77,29 @@ public class Expansion extends PlaceholderExpansion {
         }
 
         return params;
+    }
+
+    private String processSwitch(OfflinePlayer player, String params) {
+        params = Utils.parsePlaceholders(player, params.substring(7));
+        Matcher matcher = SWITCH_PATTERN.matcher(params);
+        if (!matcher.matches()) return params;
+
+        String input = matcher.group(1);
+        String[] cases = matcher.group(2).split(";");
+
+        String defaultValue = "";
+        for (String impl : cases) {
+            Matcher m = CASE_PATTERN.matcher(impl);
+            if (m.matches()) {
+                if (m.group(1).trim().equals(input)) {
+                    return m.group(2);
+                }
+            } else {
+                defaultValue = impl;
+            }
+        }
+
+        return defaultValue;
     }
 
 }
